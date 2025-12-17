@@ -125,3 +125,9 @@ module "ec2_instances" {
     environment = "development"
   }
 }
+
+module "s3-bucket-sm" {
+  source  = "app.terraform.io/policy-as-code-training/s3-bucket-sm/aws"
+  version = "1.0.0"
+  bucket = "smbucket20251217"
+}
